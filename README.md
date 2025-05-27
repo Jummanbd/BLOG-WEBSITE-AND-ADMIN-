@@ -26,3 +26,6 @@ contact
 
 // ADMIN SITE
 config.php
+
+
+**FONT END এর কাজ শেষ ।
