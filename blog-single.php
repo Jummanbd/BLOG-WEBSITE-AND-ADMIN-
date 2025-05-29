@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    
+
 
     <div class="wrap">
 
@@ -52,11 +52,11 @@
             </div>
           </div>
         </div>
-        
+
         <nav class="navbar navbar-expand-md  navbar-light bg-light">
           <div class="container">
-            
-           
+
+
             <div class="collapse navbar-collapse" id="navbarMenu">
               <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
@@ -95,7 +95,7 @@
                   <a class="nav-link" href="contact.html">Contact</a>
                 </li>
               </ul>
-              
+
             </div>
           </div>
         </nav>
@@ -104,7 +104,7 @@
 
     <section class="site-section py-lg">
       <div class="container">
-        
+
         <div class="row blog-entries element-animate">
 
           <div class="col-md-12 col-lg-8 main-content">
@@ -116,7 +116,7 @@
                       </div>
             <h1 class="mb-4">There’s a Cool New Way for Men to Wear Socks and Sandals</h1>
             <a class="category mb-5" href="#">Food</a> <a class="category mb-5" href="#">Travel</a>
-           
+
             <div class="post-content-body">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium nam quas inventore, ut iure iste modi eos adipisci ad ea itaque labore earum autem nobis et numquam, minima eius. Nam eius, non unde ut aut sunt eveniet rerum repellendus porro.</p>
             <p>Sint ab voluptates itaque, ipsum porro qui obcaecati cumque quas sit vel. Voluptatum provident id quis quo. Eveniet maiores perferendis officia veniam est laborum, expedita fuga doloribus natus repellendus dolorem ab similique sint eius cupiditate necessitatibus, magni nesciunt ex eos.</p>
@@ -140,7 +140,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus magni explicabo id molestiae, minima quas assumenda consectetur, nobis neque rem, incidunt quam tempore perferendis provident obcaecati sapiente, animi vel expedita omnis quae ipsa! Obcaecati eligendi sed odio labore vero reiciendis facere accusamus molestias eaque impedit, consequuntur quae fuga vitae fugit?</p>
             </div>
 
-            
+
             <div class="pt-5">
               <p>Categories:  <a href="#">Food</a>, <a href="#">Travel</a>  Tags: <a href="#">#manila</a>, <a href="#">#asia</a></p>
             </div>
@@ -229,7 +229,7 @@
                 </li>
               </ul>
               <!-- END comment-list -->
-              
+
               <div class="comment-form-wrap pt-5">
                 <h3 class="mb-5">Leave a comment</h3>
                 <form action="#" class="p-5 bg-light">
@@ -288,7 +288,7 @@
                 </div>
               </div>
             </div>
-            <!-- END sidebar-box -->  
+            <!-- END sidebar-box -->
             <div class="sidebar-box">
               <h3 class="heading">Popular Posts</h3>
               <div class="post-entry-sidebar">
@@ -417,7 +417,7 @@
 
     </section>
     <!-- END section -->
-  
+
     <footer class="site-footer">
         <div class="container">
           <div class="row mb-5">
@@ -475,7 +475,7 @@
                   </div>
                 </div>
                 <div class="col-md-1"></div>
-                
+
                 <div class="col-md-4">
 
                   <div class="mb-5">
@@ -488,7 +488,7 @@
                       <li><a href="#">Categories</a></li>
                     </ul>
                   </div>
-                  
+
                   <div class="mb-5">
                     <h3>Social</h3>
                     <ul class="list-unstyled footer-social">
@@ -518,7 +518,7 @@
       <!-- END footer -->
 
     </div>
-    
+
     <!-- loader -->
     <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
 
@@ -530,7 +530,7 @@
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
 
-    
+
     <script src="js/main.js"></script>
   </body>
 </html>
