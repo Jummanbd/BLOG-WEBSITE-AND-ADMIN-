@@ -24,9 +24,9 @@ use PHPMailer\PHPMailer\Exception;
     public function addUser ($data){
 
     function sendemail_varifi($name, $email, $v_token){
-        $mail = new PHPMailer(true);
-        $mail->isSMTP();
-        $mail->SMTPAuth   = true;
+    $mail = new PHPMailer(true);
+    $mail->isSMTP();
+    $mail->SMTPAuth   = true;
     //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                     //
      //Enable SMTP authentication
@@ -68,7 +68,7 @@ use PHPMailer\PHPMailer\Exception;
         $check_email = $this->db->select($e_query);
 
 
-    if($check_email > 0){
+    if($check_email > '0'){
         $error = "This Email is Alrady Exisit";
         return $error;
         header("location:register.php");

@@ -19,21 +19,23 @@ class Session{
     }
 
 
-    // login  kra tak check krbe
-    public static function logincheck(){
-        self::init();
-        if(self::get('login') == true){
-            header('location:index.php');
-        }
-    }
-
-
     // login  kra nay take  se kiso krte parbe nay
 
     public static function checkSession(){
         self::init();
-        if(self::get('login') == false){
+        if(self::get('login') === false){
             self::destroy();
+            header('Location:login.php');
+
+
+        }
+    }
+    // login  kra tak check krbe
+    public static function logincheck(){
+        self::init();
+        if(self::get('login') === true){
+
+            header('Location:index.php');
         }
     }
 
@@ -41,7 +43,7 @@ class Session{
     public static function destroy()
     {
         session_destroy();
-            header('location:login.php');
+        header('location:login.php');
 
     }
 }
