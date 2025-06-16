@@ -1,4 +1,4 @@
-Assalamulaikum আশা করি আল্লাহ রহমতে  আপনে ভাল আছেন । 
+
 
 //  ADMIN 
 এই প্রোজেক্ট  কাজ করতেছি । এই প্রোজেক্ট  Blog Website. এডমিন জন্য  ইউজার Registrtion and Login করবে ইউজার Registrtion Email varify করতে হবে .
