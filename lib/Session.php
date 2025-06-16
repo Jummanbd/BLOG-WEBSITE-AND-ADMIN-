@@ -12,7 +12,7 @@ class Session{
     // Session get krsi
     public static function get($key){
         if(isset($_SESSION[$key])){
-            $_SESSION[$key];
+           return $_SESSION[$key];
         }else{
             return false;
         }
@@ -34,7 +34,6 @@ class Session{
     public static function logincheck(){
         self::init();
         if(self::get('login') === true){
-
             header('Location:index.php');
         }
     }

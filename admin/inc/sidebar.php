@@ -3,7 +3,7 @@
 
                 <!-- LOGO -->
                 <div class="navbar-brand-box">
-                    <a href="index.html" class="logo logo-dark">
+                    <a href="index.php" class="logo logo-dark">
                         <span class="logo-sm">
                             <img src="assets/images/logo-sm.png" alt="" height="22">
                         </span>
@@ -12,7 +12,7 @@
                         </span>
                     </a>
 
-                    <a href="index.html" class="logo logo-light">
+                    <a href="index.php" class="logo logo-light">
                         <span class="logo-sm">
                             <img src="assets/images/logo-sm.png" alt="" height="22">
                         </span>
@@ -35,7 +35,7 @@
                             <li class="menu-title">Menu</li>
 
                             <li>
-                                <a href="index.html">
+                                <a href="index.php">
                                     <i class="uil-home-alt"></i><span class="badge rounded-pill bg-primary float-end">01</span>
                                     <span>Dashboard</span>
                                 </a>
@@ -43,33 +43,51 @@
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
+
                                     <i class="uil-window-section"></i>
-                                    <span>Layouts</span>
+                                    <span>Category</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="true">
                                     <li>
-                                        <a href="javascript: void(0);" class="has-arrow">Vertical</a>
-                                        <ul class="sub-menu" aria-expanded="true">
-                                            <li><a href="layouts-dark-sidebar.html">Dark Sidebar</a></li>
-                                            <li><a href="layouts-compact-sidebar.html">Compact Sidebar</a></li>
-                                            <li><a href="layouts-icon-sidebar.html">Icon Sidebar</a></li>
-                                            <li><a href="layouts-boxed.html">Boxed Width</a></li>
-                                            <li><a href="layouts-preloader.html">Preloader</a></li>
-                                            <li><a href="layouts-colored-sidebar.html">Colored Sidebar</a></li>
-                                        </ul>
+                                        <a href="categoryadd.php" class="has-arrow">Add Category </a>
                                     </li>
                                     <li>
-                                        <a href="javascript: void(0);" class="has-arrow">Horizontal</a>
-                                        <ul class="sub-menu" aria-expanded="true">
-                                            <li><a href="layouts-horizontal.html">Horizontal</a></li>
-                                            <li><a href="layouts-hori-topbar-dark.html">Topbar Dark</a></li>
-                                            <li><a href="layouts-hori-boxed-width.html">Boxed Width</a></li>
-                                            <li><a href="layouts-hori-preloader.html">Preloader</a></li>
-                                        </ul>
+                                        <a href="categorylists.php" class="has-arrow">Category Lists</a>
                                     </li>
                                 </ul>
                             </li>
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                    <i class="uil-window-section"></i>
+                                    <span>Post</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="true">
+                                    <li>
+                                        <a href="postadd.php" class="has-arrow">Post Add  </a>
+                                    </li>
+                                    <li>
+                                        <a href="postall.php" class="has-arrow">All Post</a>
+                                    </li>
+                                    <li>
+                                        <a href="post-comment.php" class="has-arrow">Post Comment</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect">
 
+                                    <i class="uil-window-section"></i>
+                                    <span>Site Option</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="true">
+                                    <li>
+                                        <a href="social-link.php" class="has-arrow">Social Link</a>
+                                    </li>
+                                     <li>
+                                        <a href="site-logo.php" class="has-arrow">Site Logo</a>
+                                    </li>
+                                </ul>
+                            </li>
 
                         </ul>
                     </div>

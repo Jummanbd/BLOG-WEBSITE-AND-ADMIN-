@@ -10,9 +10,7 @@ include_once "../helpers/Format.php";
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-
-
-class Resendemail{
+class passwordReset{
     private $db;
     private $fr;
 
@@ -21,8 +19,11 @@ class Resendemail{
      $this->db = new Database();
      $this->fr = new Format();
    }
-   public function resendEmail($email){
-    function resend_email_verifi($name, $email, $v_token){
+
+   public  function passwordReset($email) {
+
+
+    function send_password_reset($name, $email, $v_token){
     $mail = new PHPMailer(true);
     $mail->isSMTP();
     $mail->SMTPAuth   = true;
@@ -42,45 +43,49 @@ class Resendemail{
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Email Varification From Web Master';
     $email_template = "
-      <h2>You have register with blogs site</h2>
+      <h2>You have Password Reset</h2>
        <h5>Verify your email address to login please click the link below</h5>
-      <a href='http://localhost/blogs/admin/verify-email.php?token=$v_token'>Click Here</a>
+      <a href='http://localhost/blogs/admin/password-change.php?token=$v_token&email=$email'>Click Here</a>
     ";
     $mail->Body    = $email_template;
     $mail->send();
     }
 
+
     $email = $this->fr->validation($email);
-    $email = mysqli_real_escape_string($this->db->link, $email);
-
+    $v_token = md5(rand());
     if(empty($email)){
-        $error = "Email fild must not be Empty";
-        return $error;
+      $error = "Email fild must be empty";
+      return $error;
     }else{
-        $checkemail = "SELECT * FROM tbl_users wHERE email= '$email'";
-        $emailResult = $this->db->select($checkemail);
+      $checkEmail = "SELECT * FROM tbl_users WHERE email = '$email'";
+      $email_result = $this->db->select($checkEmail);
 
-        if(mysqli_num_rows($emailResult) > 0){
-            $row = mysqli_fetch_assoc($emailResult);
-            if($row['v_status'] == 0){
-                $name = $row['username'];
-                $email = $row['email'];
-                $v_token = $row['v_token'];
-                resend_email_verifi($name, $email, $v_token);
-                $success = "Verification Email link has been sent in your email";
-                return $success;
+      if(mysqli_num_rows($email_result) > 0){
+        $row = mysqli_fetch_assoc($email_result);
+        $name = $row['username'];
+        $email = $row['email'];
+        $query = "UPDATE tbl_users SET v_token = '$v_token' WHERE email = '$email' LIMIT  1";
 
-            }else{
-                $error = "Email already verified please login";
-                return $error;
-            }
+        $update_token = $this->db->update($query);
 
-
+        if($update_token){
+          send_password_reset($name, $email, $v_token);
+          $success = "Password reset email send in your email";
+          return $success;
 
         }else{
-            $error = "Email is not register please resgister first ";
-            return $error;
+          $error = "Something Wrong Token Is Not Update";
+          return $error;
         }
+
+
+
+
+      } else{
+        $error = "Email Not Found";
+        return $error;
+      }
     }
    }
 }

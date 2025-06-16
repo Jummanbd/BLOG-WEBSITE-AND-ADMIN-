@@ -3,7 +3,6 @@ ob_start();
 include_once "../lib/Session.php";
  Session::checkSession();
 
-
 ?>
 
 <!doctype html>
@@ -20,13 +19,20 @@ include_once "../lib/Session.php";
         <meta content="Themesbrand" name="author" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <!-- DataTables -->
+        <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
+        <!-- Responsive datatable examples -->
+        <link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
         <!-- Bootstrap Css -->
         <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
         <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
         <!-- App Css-->
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+        <!-- font icons -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     </head>
 
@@ -74,6 +80,7 @@ include_once "../lib/Session.php";
                                 <span class="uil-search"></span>
                             </div>
                         </form>
+
                     </div>
 
                     <div class="d-flex">
@@ -284,14 +291,14 @@ include_once "../lib/Session.php";
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-4.jpg"
+                                <img class="rounded-circle header-profile-user" src="<?=Session::get('userimg')?>"
                                     alt="Header Avatar">
-                                <span class="d-none d-xl-inline-block ms-1 fw-medium font-size-15">Marcus</span>
+                                <span class="d-none d-xl-inline-block ms-1 fw-medium font-size-15"><?=Session::get('username')?></span>
                                 <i class="uil-angle-down d-none d-xl-inline-block font-size-15"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <!-- item-->
-                                <a class="dropdown-item" href="#"><i class="uil uil-user-circle font-size-18 align-middle text-muted me-1"></i> <span class="align-middle">View Profile</span></a>
+                                <a class="dropdown-item" href="profile.php"><i class="uil uil-user-circle font-size-18 align-middle text-muted me-1"></i> <span class="align-middle">View Profile</span></a>
 
                                  <?php
                                  if(isset($_GET['action']) &&  $_GET['action'] == 'logout'){
@@ -300,6 +307,7 @@ include_once "../lib/Session.php";
                                  ?>
 
                                 <a class="dropdown-item" href="?action=logout"><i class="uil uil-sign-out-alt font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle">Sign out</span></a>
+
                             </div>
                         </div>
 

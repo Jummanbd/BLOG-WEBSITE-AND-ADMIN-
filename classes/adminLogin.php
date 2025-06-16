@@ -24,13 +24,16 @@ class adminLogin{
     } else{
         $select_query = "SELECT * FROM tbl_users WHERE email = '$email' AND password= '$password'";
         $result = $this->db->select($select_query);
+
         if(mysqli_num_rows($result) > 0){
             $row = mysqli_fetch_assoc($result);
-
             if($row['v_status'] == 1){
                 Session::set('login', true);
-                Session:: set('username', $row['username']);
+                Session::set('userid', $row['userid']);
+                Session::set('username', $row['username']);
+                Session::set('userimg', $row['userimg']);
                 header('location:index.php');
+
 
             }else{
                 $error = "Please First virifi your email";

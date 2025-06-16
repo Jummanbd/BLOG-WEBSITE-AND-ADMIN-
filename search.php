@@ -1,15 +1,19 @@
 <?php
+ include_once 'inc/header.php';
  $filepath = realpath(dirname(__FILE__));
  include_once ($filepath.'/./classes/post.php');
  $post = new Post();
-
  include_once './helpers/Format.php';
  $fr= new Format();
- include_once 'inc/header.php';
- include_once 'inc/slider.php';
+
+ if(!isset($_GET['search']) || $_GET['search'] == NULL){
+     echo "<h1 class ='text-danger pl-5'> Search Result Not Found </h1>";
+ }else{
+    $search = $_GET['search'];
+ }
  ?>
 
-  <section class="site-section py-sm">
+  <section class="site-section py-sm pt-5">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -20,7 +24,7 @@
         <div class="col-md-12 col-lg-8 main-content">
           <div class="row">
             <?php
-             $getPost = $post->latestPost();
+             $getPost = $post->searchPost($search);
              if($getPost){
               while($row= mysqli_fetch_assoc($getPost)){
                 ?>
@@ -40,6 +44,9 @@
                   </div>
                 <?php
               }
+             }else{
+                echo "<h1 class = 'text-danger '> Search Result Not Found </h1>";
+
              }
             ?>
 
