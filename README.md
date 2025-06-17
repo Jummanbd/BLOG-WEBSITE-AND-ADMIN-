@@ -28,3 +28,14 @@ config.php
 login
 register
 email-verify
+
+// mysql
+
+**table**
+
+1.tbl_category
+2.tbl_comment
+3.tbl_logo
+4.tbl_post
+5.tbl_social
+6.tbl_users
