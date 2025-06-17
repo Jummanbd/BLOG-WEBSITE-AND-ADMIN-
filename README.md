@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 // ADMIN
 এই প্রোজেক্ট কাজ করতেছি । এই প্রোজেক্ট Blog Website. এডমিন জন্য ইউজার Registrtion and Login করবে ইউজার Registrtion Email varify করতে হবে .
 ইউজার যদি Forget Password করতে পারবে এটা আছে . Emai virify করতে হবে নাই লগইন করা যাবে না . ইউজার চাইলে Profile update করতে পাবে . এটা ইউজার চাইলে Resend Email ব্যবহার করতে পারবে .
+=======
+
+>>>>>>> 0cbfd927ff9ee131e07661f57b3792d0496a488f
 
 - DASHBOARD
 - CATEGORY ভিতরে আছে _ add Category _ Category List . Category ADD করা যায় Update করা যায় DELETE করা যায় এই Category পোস্ট View আছে ।
